@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <title>Countdown Enem</title>
+</head>
+<body>
+  <div class="center">  
+    <main id="boxContent">
+      <section id="boxCountdown">
+        <h1>Para o enem falta</h1>
+        <div id="boxCountdown__time">
+            <div id="months" class="time">
+              <h3>Meses</h3> 
+              <p>00</p> 
+            </div>
+            <div id="weeks" class="time">
+              <h3>Semanas</h3>
+              <p>00</p>
+            </div>
+            <div id="days" class="time">
+              <h3>Dias</h3>
+              <p>00</p>
+            </div> 
+            <div id="hours">00:00:00</div>
+        </div>
+        
+        <div id="boxCountdown__signUp">
+          <p>Inscreva-se para receber dicas de estudo</p>
+          <button data-signUp>Inscreva-se</button>
+        </div>
+      </section>
+      <div id="heroImage">
+        <img src="img/imagehero.svg" alt="garoto estudando com livro aberto">
+      </div>
+    </main>
+  </div>
+
+  <section class="modal-container" data-modal="container">
+    <div class="modal">
+      <button data-modal="closed" class="closed"><i class="fa-solid fa-xmark"></i></button>
+      <form action="">
+        <div class="texto">
+          <h1>Newsletter de dicas para o enem</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda repudiandae labore molestias, quidem enim.
+          </p>
+        </div>
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" id="nome" placeholder="Seu Nome">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="email@.com">
+        <div class="newsletter">
+          <input type="checkbox" name="validNewsletter" id="validNewsletter">
+          <label for="validNewsletter">Eu aceito receber newsletter de novidades e dicas de estudo para o enem</label>
+        </div>
+        <button type="submit">Assinar</button>
+      </form>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+:root {
+  font-size: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins';
+}
+
+.center {
+  position: relative;
+  display: grid;
+  min-height: 100vh;
+  justify-content: center;
+  align-content: center;
+}
+
+.center::before{
+  content: '';
+  position: absolute;
+  background-image: url(../img/wave.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 150px;
+  top: 0px;
+  z-index: -1;
+  transform: rotate(180deg);
+}
+
+.center::after {
+  content: '';
+  position: absolute;
+  background-image: url(../img/wave.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 150px;
+  bottom: 0px;
+  z-index: -1;
+}
+
+#boxContent {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+}
+
+#boxCountdown h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3.6rem;
+  letter-spacing: 0.4rem;
+  text-transform: uppercase;
+  color: #0967B8;
+  margin-bottom: 16px;
+}
+
+#boxCountdown__time {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  
+}
+
+.time {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 7.2rem;
+  color: #4D4C59;
+  justify-self: center;
+  text-align: center;
+}
+
+.time h3 {
+  font-size: 1.4rem;
+  text-align: center;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 21px;
+  text-transform: capitalize;
+}
+
+#hours {
+  font-size: 3.2rem;
+  grid-column: 1 / 4;
+  justify-self: center;
+  color: #4D4C59;
+  margin-bottom: 32px;
+}
+
+#boxCountdown__signUp {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+  align-items: center;
+}
+
+#boxCountdown__signUp p {
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+#boxCountdown__signUp button {
+  text-align: center;
+  border-radius: 10px;
+  width: 160px;
+  height: 46px;
+  border: none;
+  background-color: #0D4099;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+#boxCountdown__signUp button:hover {
+  width: 200px;
+  text-shadow: 1px 1px 10px #fff;
+}
+
+#heroImage img{
+  min-width: 480px;
+  min-height: 480px;
+  width: 100%;
+  height: 45vw;
+}
+
+@media (max-width: 992px) {
+  #heroImage img {
+    min-width: 420px;
+    min-height: 420px;
+    gap: 10px;
+  }
+
+  #boxContent {
+    gap: 15px;
+  }
+
+  #boxCountdown h1 {
+    font-size: 2.6rem;
+  }
+
+  .time {
+    font-size: 4.8rem;
+  }
+  
+  #boxCountdown__signUp {
+    row-gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  #boxContent {
+    grid-template-columns: 1fr 1fr;
+    margin: 0 10px;
+  }
+  #heroImage img {
+    min-width: 255px;
+    min-height: 255px;
+  }
+  .time {
+    font-size: 3.8rem;
+  }
+  #hours {
+    font-size: 2.2rem;
+  }
+
+  #boxCountdown h1 {
+    font-size: 2.2rem;
+    letter-spacing: 0.2rem;
+    text-align: center;
+  }
+
+}
+
+@media (max-width: 545px) { 
+  #boxContent {
+    grid-template-columns: 1fr;
+    margin: 0 10px;
+    padding: 8px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 10px;
+  }
+  
+  .time {
+    font-size: 4rem;
+  }
+  #hours {
+    font-size: 2.2rem;
+  }
+
+  #boxCountdown h1 {
+    font-size: 2.2rem;
+  }
+  #heroImage img {
+    display: none;
+  }
+  .center::before, .center::after {
+    height: 125px;
+  }
+}
